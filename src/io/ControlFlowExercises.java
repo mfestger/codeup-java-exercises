@@ -4,6 +4,7 @@
 package io;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
@@ -55,6 +56,7 @@ public class ControlFlowExercises {
             p++;
         }
 
+
         //Exercise 3
         System.out.println("What number would you like to go up to? (Integers only)");
 
@@ -90,6 +92,57 @@ public class ControlFlowExercises {
        } else if (grade >= 90){
            System.out.println("A");
        }
+
+       // BONUS EXERCISES
+
+
+        //Bonus 1
+
+        System.out.println("Type in an integer to hear the raindrops. Type 'Stop' to terminate. ");
+        int myNumber = scan.nextInt();
+
+        if(myNumber % 3 != 0 & myNumber % 5 != 0 & myNumber % 7 != 0){
+            System.out.println(myNumber);
+        }
+        if (myNumber % 5 == 0){
+            System.out.print("Plang");
+        }
+        if (myNumber % 7 == 0){
+            System.out.print("Plong");
+        }
+        if (myNumber % 3 == 0){
+            System.out.print("Pling");
+        }
+
+       // Bonus 2
+        int students = 1;
+        int[] classroom;
+        classroom = new int[11];
+
+        while (students <= 10) {
+            Random rand = new Random();
+            int score = rand.nextInt(100) + 1;
+            classroom[students] = score;
+            System.out.println("Student " + students + ": " + classroom[students]);
+            students++;
+        }
+        int average = (classroom[1] + classroom[2] + classroom[3] + classroom[4] + classroom[5] + classroom[6] + classroom[7] + classroom[8] + classroom[9] + classroom[10]) / 10;
+        int min = classroom[1];
+        for (int t = 1; t <= classroom.length - 1; t++){
+            if (min > classroom[t]){
+                min = classroom[t];
+            }
+        }
+        System.out.println("Class Average: " + average);
+        System.out.println("Lowest Score: " + min);
+
+
+
+
+
+
+
+
 
     }
 }
