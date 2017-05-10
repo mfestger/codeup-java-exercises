@@ -29,7 +29,7 @@ public class ControlFlowExercises {
             a -= 5;
         } while (a >= -10);
 
-        int b = 2;
+        long b = 2;
         do {
             System.out.println(b);
             b *= b;
