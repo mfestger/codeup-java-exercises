@@ -11,6 +11,7 @@ subtraction(10);
 multiplication(5);
 division(10);
 modular(2);
+multiplyHardMode(5, 5);
     }
 
     public static void addition(int number){
@@ -34,6 +35,14 @@ modular(2);
         int n = number;
         System.out.println(10 % n);
         System.out.println(17 % n);
+    }
+    public static void multiplyHardMode(int number, int x){
+        int n = number;
+        int z = x;
+        for(int i = 0; i < n; i++){
+            n += z;
+        }
+        System.out.println(n++);
     }
 
 
