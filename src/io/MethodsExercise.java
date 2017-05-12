@@ -4,46 +4,86 @@
  */
 
 package io;
+
+import java.util.Scanner;
+import java.util.Random;
+
 public class MethodsExercise {
     public static void main(String[] args) {
-addition(5);
-subtraction(10);
-multiplication(5);
-division(10);
-modular(2);
-multiplyHardMode(5, 5);
+
+
+        System.out.println("5 + 5 = " + addition(5, 5));
+        System.out.println("10 - 5 = " + subtraction(10, 5));
+        System.out.println("5 * 2 = " + multiplication(5, 5));
+        System.out.println("10 / 2 = " + division(10, 2));
+        System.out.println("50 % 3 = " + modular(50, 3));
+        System.out.println("5 * 5 = " + multiplyHardMode(5, 5) + " This was done without the multiplication operator");
+        System.out.println(diceGame(6));
+                System.out.println(getInteger(1, 10));
+
     }
 
-    public static void addition(int number){
-        int n = number;
-        System.out.println(n + n);
+    public static int addition(int number, int number2) {
+        return number + number2;
     }
-    public static void subtraction(int number){
-        int n = number;
-        System.out.println(n - 6);
+
+    public static int subtraction(int number, int number2) {
+        return number - number2;
     }
-    public static void multiplication(int number){
-        int n = number;
-        System.out.println(n * n);
+
+    public static int multiplication(int number, int number2) {
+        return number * number2;
     }
-    public static void division(int number){
-        int n = number;
-        System.out.println(n / 2);
+
+    public static int division(int number, int number2) {
+        return number / number2;
         // attempting to divide by 0 will crash
     }
-    public static void modular(int number){
-        int n = number;
-        System.out.println(10 % n);
-        System.out.println(17 % n);
-    }
-    public static void multiplyHardMode(int number, int x){
-        int n = number;
-        int z = x;
-        for(int i = 0; i < n; i++){
-            n += z;
-        }
-        System.out.println(n++);
+
+    public static int modular(int number, int number2) {
+        return number % number2;
     }
 
+    public static int multiplyHardMode(int number, int number2) {
+        int var = 0;
+        for (int i = 1; i <= number2; i++) {
+        }
+        return var += number;
+    }
+
+    public static int getInteger(int min, int max) {
+        System.out.print("Enter a number between 1 and 10: ");
+        Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(10) + 1;
+        System.out.println("HINT: It is: " + randomNumber);
+        int userInput = scan.nextInt();
+
+
+        if (userInput > 10 || userInput < 1) {
+            System.out.println("That was not a valid number.");
+            getInteger(1, 10);
+        }
+
+        if (randomNumber == userInput) {
+            System.out.println("Correct!");
+            System.out.print("The correct number is: ");
+            return randomNumber;
+        } else {
+            System.out.println("Nope.");
+            getInteger(1, 10);
+        }
+
+        return userInput;
+    }
+
+
+    public static int diceGame(int diceSize) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How man sides?");
+        diceSize = scan.nextInt();
+        System.out.println(diceSize);
+        return diceSize;
+    }
 
 }
