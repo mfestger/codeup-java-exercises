@@ -18,8 +18,9 @@ public class MethodsExercise {
         System.out.println("10 / 2 = " + division(10, 2));
         System.out.println("50 % 3 = " + modular(50, 3));
         System.out.println("5 * 5 = " + multiplyHardMode(5, 5) + " This was done without the multiplication operator");
-        System.out.println(diceGame(6));
-                System.out.println(getInteger(1, 10));
+//        System.out.println(diceGame(6));
+        getInteger();
+
 
     }
 
@@ -51,7 +52,7 @@ public class MethodsExercise {
         return var += number;
     }
 
-    public static int getInteger(int min, int max) {
+    public static void getInteger() {
         System.out.print("Enter a number between 1 and 10: ");
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
@@ -62,28 +63,27 @@ public class MethodsExercise {
 
         if (userInput > 10 || userInput < 1) {
             System.out.println("That was not a valid number.");
-            getInteger(1, 10);
+            getInteger();
         }
 
         if (randomNumber == userInput) {
             System.out.println("Correct!");
-            System.out.print("The correct number is: ");
-            return randomNumber;
+            System.out.print("The correct number is: " + randomNumber);
+//            return randomNumber;
         } else {
             System.out.println("Nope.");
-            getInteger(1, 10);
+            getInteger();
         }
 
-        return userInput;
     }
 
 
-    public static int diceGame(int diceSize) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("How man sides?");
-        diceSize = scan.nextInt();
-        System.out.println(diceSize);
-        return diceSize;
-    }
+//    public static int diceGame(int diceSize) {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println("How man sides?");
+//        diceSize = scan.nextInt();
+//        System.out.println(diceSize);
+//        return diceSize;
+//    }
 
 }
