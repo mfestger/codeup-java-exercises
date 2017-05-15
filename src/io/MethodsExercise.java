@@ -21,6 +21,7 @@ public class MethodsExercise {
         getInteger();
 
 
+
     }
 
     public static int addition(int number, int number2) {
@@ -68,7 +69,6 @@ public class MethodsExercise {
         if (randomNumber == userInput) {
             System.out.println("Correct!");
             System.out.print("The correct number is: " + randomNumber);
-//            return randomNumber;
         } else {
             System.out.println("Nope.");
             getInteger();
@@ -76,7 +76,28 @@ public class MethodsExercise {
 
     }
 
+    public class Factorial {
+        public void main(String[] args) {
+            // input is a number (integer)
+            // factorial is the output (Integer -> long)
+            long number = 7;
+            long factorial;
+            Scanner input = new Scanner(System.in);
+            // there is going to be a series of transformations
+            // constant  -> variable
+            // variable -> if statement
+            // if -> loop
 
+            System.out.println("Please enter an integer.");
+            number = input.nextLong();
+            factorial = 1;
+            for(int i = 1; i <= number; i++){ //counter
+                factorial = factorial * i; //accumulator
+            }
+                System.out.println(number + "! = " + factorial);
+
+        }
+    }
 
 
 }
