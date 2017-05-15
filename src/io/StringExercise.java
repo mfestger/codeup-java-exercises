@@ -2,6 +2,8 @@
  * Created by michaelfestger on 5/10/17.
  */
 package io;
+        import java.util.Scanner;
+        import java.util.Random;
 
 public class StringExercise {
     public static void main(String[] args) {
@@ -19,9 +21,23 @@ public class StringExercise {
         System.out.println(message);
 
         //Exercise 3 & 4
-        message = "I can do backslashes \\, couble \\\\";
+        message = "I can do backslashes \\,  here are double \\\\";
         System.out.println(message);
 
+        //Bonus Exercise
+        Scanner input = new Scanner(System.in);
+        System.out.println("Talk to Bob:");
+        String bob = input.nextLine();
+
+        if(bob.endsWith("?")){
+            System.out.println("Sure.");
+        } else if(bob.trim().isEmpty()){
+            System.out.println("Fine. Be that way...");
+        } else if(bob.endsWith("?") || bob.toUpperCase().equals(bob)){
+            System.out.println("Whoa, chill out!");
+        } else {
+            System.out.println("Whatever.");
+        }
 
 
     }
