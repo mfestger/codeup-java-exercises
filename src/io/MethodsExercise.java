@@ -18,7 +18,6 @@ public class MethodsExercise {
         System.out.println("10 / 2 = " + division(10, 2));
         System.out.println("50 % 3 = " + modular(50, 3));
         System.out.println("5 * 5 = " + multiplyHardMode(5, 5) + " This was done without the multiplication operator");
-//        System.out.println(diceGame(6));
         getInteger();
 
 
@@ -78,12 +77,6 @@ public class MethodsExercise {
     }
 
 
-//    public static int diceGame(int diceSize) {
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("How man sides?");
-//        diceSize = scan.nextInt();
-//        System.out.println(diceSize);
-//        return diceSize;
-//    }
+
 
 }
