@@ -113,6 +113,7 @@ public class ControlFlowExercises {
         if (myNumber % 3 == 0){
             System.out.print("Pling");
         }
+        System.out.println(" ");
 
        // Bonus 2
         int students = 1;
