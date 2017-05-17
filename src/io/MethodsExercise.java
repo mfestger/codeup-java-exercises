@@ -9,24 +9,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class MethodsExercise {
-    public static void main(String[] args) {
 
-
-        System.out.println("5 + 5 = " + addition(5, 5));
-        System.out.println("10 - 5 = " + subtraction(10, 5));
-        System.out.println("5 * 2 = " + multiplication(5, 5));
-        System.out.println("10 / 2 = " + division(10, 2));
-        System.out.println("50 % 3 = " + modular(50, 3));
-        System.out.println("5 * 5 = " + multiplyHardMode(5, 5) + " This was done without the multiplication operator");
-        getInteger();
-
-
-
-    }
-
-    public static int addition(int number, int number2) {
-        return number + number2;
-    }
+    String[] itemHolder;
+    double[] priceHolder;
+    int[] numberofItemsArray;
+    Scanner input = new Scanner(System.in);
 
     public static int subtraction(int number, int number2) {
         return number - number2;
@@ -87,17 +74,24 @@ public class MethodsExercise {
             // constant  -> variable
             // variable -> if statement
             // if -> loop
+            String wantsToContinue;
+            do {
 
-            System.out.println("Please enter an integer.");
-            number = input.nextLong();
-            factorial = 1;
-            for(int i = 1; i <= number; i++){ //counter
-                factorial = factorial * i; //accumulator
-            }
+
+                System.out.println("Please enter an integer.");
+                number = input.nextLong();
+                factorial = 1;
+                for (int i = 1; i <= number; i++) { //counter
+                    factorial = factorial * i; //accumulator
+                }
                 System.out.println(number + "! = " + factorial);
 
+                System.out.println("Do you want to continue? (y/n)?");
+                input.nextLine();
+                wantsToContinue = input.nextLine();
+
+            } while ("y".equalsIgnoreCase(wantsToContinue));
         }
     }
-
 
 }
