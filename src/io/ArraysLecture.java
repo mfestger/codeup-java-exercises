@@ -31,6 +31,20 @@ public class ArraysLecture {
         int size = input.nextInt();
         int[] elements = new int[size];
         System.out.println("You want an array with the size of " + size + ", got it.");
+
+        String[] beatles = {"John", "Paul", "George", "Ringo"};
+        System.out.println(beatles[2].toUpperCase());
+
+//        Product[] products = new Product[10];
+//        products[0] = new Product("Mango", 2.5);
+//
+//        Product[] moreProducts = {
+//          new Product("Mango", 2.5),
+//          new Product("Coke", 1.5)
+//        };
+//        System.out.println(moreProduts[0].format());
+        System.out.println(beatles[beatles.length - 1]); // This gets you all contents in the array
+
     }
 
 
