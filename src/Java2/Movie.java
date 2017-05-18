@@ -16,7 +16,7 @@ public class Movie {
 
     public String getInfo(){
         String results;
-        results = ("Title: " + name + " Category: " + category);
+        results = ("Title: " + name + " | Category: " + category);
         return results;
     }
 
