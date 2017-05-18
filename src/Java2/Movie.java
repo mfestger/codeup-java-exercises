@@ -1,4 +1,3 @@
-
 /**
  * Created by michaelfestger on 5/17/17.
  */
@@ -17,7 +16,7 @@ public class Movie {
 
     public String getInfo(){
         String results;
-        results = ("Category: " + category + " Movie: " + name);
+        results = ("Title: " + name + " Category: " + category);
         return results;
     }
 
