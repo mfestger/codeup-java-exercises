@@ -5,17 +5,25 @@
 
 package Java2;
 public class Movie {
-    String name, category;
+    private String name; // properties of the object "Movie"
+    private String category; // properties of the object "Movie"
 
+// constructor has to have same name as class
 
-    public String getName() {
-        return name;
+    public Movie(String name, String category){
+        this.name = name;
+        this.category = category;
     }
 
-    public String getCategory() {
+    public String getInfo(){
+        String results;
+        results = ("Category: " + category + " Movie: " + name);
+        return results;
+    }
+
+    public String getCategory(){
         return category;
     }
-
 
 }
 
