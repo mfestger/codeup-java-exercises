@@ -5,14 +5,18 @@ package Java2;
 
 public class ShapesTest {
     public static void main(String[] args) {
-        Rectangle box1 = new Square(5, 4);
-        Square box2 = new Square(5, 5);
+        Rectangle box1 = new Rectangle(5, 4);
+        Rectangle box2 = new Square( 5);
 
-        System.out.println("The perimeter of Box 1 is: " + box1.getPerimeter());
-        System.out.println("The area of Box 1 is: " + box1.getArea());
+        System.out.println("------Box1------");
+        System.out.println("Perimeter of this box: " + box1.getPerimeter());
+        System.out.println("Area of this box is: " + box1.getArea());
+        System.out.println();
+        System.out.println("------Box2------");
+        System.out.println("Perimeter of this box: " + box2.getPerimeter());
+        System.out.println("Area of this box is: " + box2.getArea());
+        System.out.println(box2.description());
 
-        System.out.println("The length of Box 2 is: " + box2.description());
-        System.out.println("The width of Box 2 is: " + box2.description());
     }
 
 

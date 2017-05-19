@@ -1,24 +1,23 @@
-package Java2;
-
-import Java2.Rectangle;
 
 /**
  * Created by michaelfestger on 5/19/17.
  */
 
+    package Java2;
 
-    class Square extends Rectangle{
+
+   public class Square extends Rectangle{
     private int sides;
-    public Square(int length, int width) {
-        super(length, width);
-        sides = length;
-        sides = width;
-
+    public Square(int sides) {
+        super(sides, sides);
+        this.sides = sides;
     }
 
+    @Override
     public String description() {
-        return String.format("The size of each side is: " + sides);
+        return String.format("Each side of this box is: " + sides, super.description(), sides);
     }
+
 
 
 

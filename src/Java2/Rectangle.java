@@ -21,4 +21,9 @@ public class Rectangle {
         return perimeter;
     }
 
+    public String description() {
+       return String.format( "YAHOO!");
+
+    }
+
 }
