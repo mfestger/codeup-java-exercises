@@ -19,6 +19,11 @@ public class ListExamples {
         ArrayList<String> strings = new ArrayList<>(); // <strings> will only accept String types
         strings.add("Mike");
         strings.add("Festger");
+        strings.add("Test");
+
+        for (String string : strings){
+            System.out.println(string);
+        }
 
         // Boxing -> Wrapper classes from primitive types
         // int -> Integer
@@ -27,5 +32,7 @@ public class ListExamples {
         ArrayList<Integer> integers = new ArrayList<Integer>(); // "int" will not work, must be "Integer"
         integers.add(29);
         integers.add(10);
+
+
     }
 }
