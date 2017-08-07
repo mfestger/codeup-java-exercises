@@ -20,6 +20,13 @@ public class JavaChallenges {
 //                We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
 
         public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+        if (aSmile && bSmile) {
+            return true;
+        }
+        if (!aSmile && !bSmile) {
+            return true;
+        }
+        return false;
 
         }
 
