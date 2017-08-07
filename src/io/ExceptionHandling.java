@@ -9,6 +9,7 @@ public class ExceptionHandling {
         try {
             System.out.println(56 / 60);
             myAccount = new Account(-12);
+            myAccount.withdrawel(-100);
             System.out.println(myAccount.getBalance());
         } catch (ArithmeticException exception) {
             System.out.println(exception.getMessage());

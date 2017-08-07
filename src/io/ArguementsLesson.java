@@ -28,4 +28,13 @@ public class ArguementsLesson {
         else return number1 + multiplication(number1, number2 -1);
 
     }
+
+
+    public static long multiplication2(long number1, long number2){
+        System.out.println("Number 1: " + number1);
+        System.out.println("Number 2: " + number2);
+        if (number2 == 1) return number1;
+        else return number1 + multiplication2(number1 +2, number2 );
+
+    }
 }

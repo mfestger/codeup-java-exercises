@@ -19,6 +19,18 @@ public class Account {
         balance = initialBalance;
     }
 
+    public void deposit(double amount){
+        balance += amount;
+    }
+
+    // this is an unchecked exception
+    public void withdrawel(double amount){
+        if (amount < 0) {
+            throw new RuntimeException("Cannot withdraw a negative amount.");
+        }
+        balance -= amount;
+    }
+
     public double getBalance() {
         return balance;
     }

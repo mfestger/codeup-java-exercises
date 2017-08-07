@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class FileIOLesson {
     public static void main(String[] args) throws IOException {
@@ -22,8 +23,11 @@ public class FileIOLesson {
             Files.createFile(dataFile);
         }
         Files.readAllLines(dataFile);
-        System.out.println((String line: lines));
+
     }
+
+//    List<String> groceryList = Arrays.asList("coffee", "milk", "sugar", "mango");
+//    Files.write(dataFile, groceryList);
 
 
 }
