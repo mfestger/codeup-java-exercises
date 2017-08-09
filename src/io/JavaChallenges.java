@@ -63,9 +63,19 @@ public class JavaChallenges {
 
     // Challenge 6
 
-  //  Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
-  public boolean makes10(int a, int b) {
-      return (a == 10 || b == 10 || a+b == 10);
-  }
+    //  Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+    public boolean makes10(int a, int b) {
+        return (a == 10 || b == 10 || a + b == 10);
+    }
+
+
+    // Challenge 7
+    // Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+    public boolean nearHundred(int n) {
+        return ((Math.abs(100 - n) <= 10) ||
+                (Math.abs(200 - n) <= 10));
+    }
+
+
 }
 }
