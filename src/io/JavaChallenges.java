@@ -85,11 +85,22 @@ public class JavaChallenges {
     public boolean posNeg(int a, int b, boolean negative) {
         if (negative) {
             return (a < 0 && b < 0);
-        }
-        else {
+        } else {
             return ((a < 0 && b > 0) || (a > 0 && b < 0));
         }
     }
+
+    // Challenge 9
+
+//    Given a string, return a new string where "not " has been added to the front. However,
+//            if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+    public String notString(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            return str;
+        }
+        return "not " + str;
+}
 
 
 }
