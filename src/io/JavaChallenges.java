@@ -180,7 +180,6 @@ public class JavaChallenges {
 
     // Challenge 16
 
-
     //  Given a string, return true if the string starts with "hi" and false otherwise.
     public boolean startHi(String str) {
         if (str.length() < 2) return false;
@@ -191,6 +190,19 @@ public class JavaChallenges {
             return false;
         }
     }
+
+    // Challenge 17
+
+    // Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+
+    public boolean icyHot(int temp1, int temp2) {
+        if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
 }
