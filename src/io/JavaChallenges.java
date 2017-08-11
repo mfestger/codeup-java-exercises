@@ -100,7 +100,7 @@ public class JavaChallenges {
             return str;
         }
         return "not " + str;
-}
+    }
 
 // Challenge 10
 
@@ -109,22 +109,22 @@ public class JavaChallenges {
 
     public String missingChar(String str, int n) {
         String front = str.substring(0, n);
-        String back = str.substring(n+1, str.length());
+        String back = str.substring(n + 1, str.length());
 
         return front + back;
     }
 
     // Challenge 11
 
-   // Given a string, return a new string where the first and last chars have been exchanged.
+    // Given a string, return a new string where the first and last chars have been exchanged.
 
     public String frontBack(String str) {
         if (str.length() <= 1) return str;
 
-        String mid = str.substring(1, str.length()-1);
+        String mid = str.substring(1, str.length() - 1);
 
         // last + mid + first
-        return str.charAt(str.length()-1) + mid + str.charAt(0);
+        return str.charAt(str.length() - 1) + mid + str.charAt(0);
     }
 
     //Challenge 12
@@ -137,8 +137,7 @@ public class JavaChallenges {
 
         if (str.length() >= 3) {
             front = str.substring(0, 3);
-        }
-        else {
+        } else {
             front = str;
         }
 
@@ -179,6 +178,19 @@ public class JavaChallenges {
         return front + str + front;
     }
 
+    // Challenge 16
+
+
+    //  Given a string, return true if the string starts with "hi" and false otherwise.
+    public boolean startHi(String str) {
+        if (str.length() < 2) return false;
+        String firstTwo = str.substring(0, 2);
+        if (firstTwo.equals("hi")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 }
