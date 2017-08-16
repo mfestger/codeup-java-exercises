@@ -273,5 +273,26 @@ public boolean mixStart(String str) {
         return result;
     }
 
+    // Challenge 23
+
+   // Given three int values, a b c, return the largest.
+
+    public int intMax(int a, int b, int c) {
+        int max;
+
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+
+        if (c > max) {
+            max = c;
+        }
+        return max;
+
+    }
+
+
 }
 }
