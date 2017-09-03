@@ -350,20 +350,20 @@ public class JavaChallenges {
     public boolean stringE(String str) {
         int count = 0;
 
-        for (int i=0; i<str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == 'e') count++;
         }
-        return (count >= 1 && count <=3);
+        return (count >= 1 && count <= 3);
     }
 
     // Challenge 28
 
 
- //   Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57.
- //   Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+    //   Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57.
+    //   Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
 
     public boolean lastDigit(int a, int b) {
-        return(a % 10 == b % 10);
+        return (a % 10 == b % 10);
     }
 
     // Challenge 29
@@ -377,7 +377,7 @@ public class JavaChallenges {
         if (str.length() <= 3) return str.toUpperCase();
         int cut = str.length() - 3;
         String front = str.substring(0, cut);
-        String back  = str.substring(cut);
+        String back = str.substring(cut);
 
         return front + back.toUpperCase();
     }
@@ -389,10 +389,10 @@ public class JavaChallenges {
 //    every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
 
     public String everyNth(String str, int n) {
-        public String everyNth(String str, int n) {
+        public String everyNth (String str,int n){
             String result = "";
 
-            for (int i=0; i<str.length(); i = i + n) {
+            for (int i = 0; i < str.length(); i = i + n) {
                 result = result + str.charAt(i);
             }
             return result;
@@ -407,7 +407,7 @@ public class JavaChallenges {
 
     public String stringTimes(String str, int n) {
         String result = "";
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             result = result + str;  // could use += here
         }
         return result;
@@ -419,18 +419,18 @@ public class JavaChallenges {
     // or whatever is there if the string is less than length 3. Return n copies of the front;
 
     public String frontTimes(String str, int n) {
-    int frontLen = 3;
-  if (frontLen > str.length()) {
-        frontLen = str.length();
-    }
-    String front = str.substring(0, frontLen);
+        int frontLen = 3;
+        if (frontLen > str.length()) {
+            frontLen = str.length();
+        }
+        String front = str.substring(0, frontLen);
 
-    String result = "";
-  for (int i=0; i<n; i++) {
-        result = result + front;
+        String result = "";
+        for (int i = 0; i < n; i++) {
+            result = result + front;
+        }
+        return result;
     }
-  return result;
-}
 
 
 // Challenge 33
@@ -440,8 +440,8 @@ public class JavaChallenges {
 
     int countXX(String str) {
         int count = 0;
-        for (int i = 0; i < str.length()-1; i++) {
-            if (str.substring(i, i+2).equals("xx")) count++;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 2).equals("xx")) count++;
         }
         return count;
     }
@@ -455,8 +455,8 @@ public class JavaChallenges {
         if (i == -1) return false; // no "x" at all
 
         // Is char at i+1 also an "x"?
-        if (i+1 >= str.length()) return false; // check i+1 in bounds?
-        return str.substring(i+1, i+2).equals("x");
+        if (i + 1 >= str.length()) return false; // check i+1 in bounds?
+        return str.substring(i + 1, i + 2).equals("x");
 
         // Another approach -- .startsWith() simplifies the logic
         // String x = str.substring(i);
@@ -465,18 +465,31 @@ public class JavaChallenges {
 
     // Challenge 35
 
-   // Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+    // Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
 
     public String stringBits(String str) {
         String result = "";
         // Note: the loop increments i by 2
-        for (int i=0; i<str.length(); i+=2) {
-            result = result + str.substring(i, i+1);
+        for (int i = 0; i < str.length(); i += 2) {
+            result = result + str.substring(i, i + 1);
             // Alternately could use str.charAt(i)
         }
         return result;
     }
+
+// Challenge 36
+
+    //  Given a non-empty string like "Code" return a string like "CCoCodCode".
 
+
+    public String stringSplosion(String str) {
+        String result = "";
+        // On each iteration, add the substring of the chars 0..i
+        for (int i = 0; i < str.length(); i++) {
+            result = result + str.substring(0, i + 1);
+        }
+        return result;
+    }
 
 
 }
